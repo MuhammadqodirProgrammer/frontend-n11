@@ -1,0 +1,1 @@
+# Switch case else if array va boshqalar
