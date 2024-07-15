@@ -1,91 +1,112 @@
-// *******************************************
-
-
-// const calculateTwoNum = (operation, num1, num2) => {
-
-//     switch (operation) {
-//         case "+":
-//             console.log(num1 + num2);
-//             break;
-//         case "-":
-//             console.log(num1 - num2);
-//             break;
-//         default:
-//             console.log("Bunday amal yoq ");
-//             break
-
-//     }
-
-
+// "use strict";
+// function showThis() {
+//     console.log(this);
 // }
-
-// calculateTwoNum("+", 60, 50) // 110
-// calculateTwoNum("-", 60, 50) // 10
-// //va boshqalar 
+// showThis();
 
 
-// *******************************************
 
-let arr = ["null", 1, 5, 0, 'a', null, " ", 'bcd', undefined, "", false, , "hello World", "false", ""]
-
-
-// const separateTruthyFalsy = (array) => {
-//     let truthyValues = [];
-//     let falsyValues = [];
-
-
-//     for (let i = 0; i < array.length; i++) {
-//         if (array[i]) {
-//             truthyValues.push(array[i])
-//         } else {
-//             falsyValues.push(array[i])
-//         }
-
+// const person = {
+//     name: "Ahmad",
+//     greet: () => {
+//         console.log(this);
 //     }
-
-//     return {
-//         truthyValues: truthyValues,
-//         falsyValues: falsyValues
-//     };
 // };
+// person.greet(); // "Ahmad"
 
-// const result = separateTruthyFalsy(arr);
-// console.log("Truthy values:", result.truthyValues);
-// console.log("Falsy values:", result.falsyValues);
+// function Person(name) {
+//     this.name = name;
+//     console.log(this);
+// }
+// const person1 = new Person("Ali");
+// console.log(person1.name); // "Ali"
 
-
-// *******************************************
-
-// function mergeArrays(arr1, arr2) {
-
-//     let newArr = [...arr1, ...arr2]
-
-//     newArr.sort((a, b) => b - a)
-//     console.log(newArr);
-
-
+// function logger(nimdir, nimdir2) {
+//     console.log(this, nimdir, nimdir2);
 // }
 
-// let array1 = [9, 6, 3];
-// let array2 = [4, 1, 2];
-// let mergedArray = mergeArrays(array1, array2);
+
+// const ozimiziThis = {
+//     age: 20,
+//     salary: 10000
+// }
+// call applay ni ishlatishda farqi faqat argumnt berishda 
+// logger.call(ozimiziThis, "bu calldan kelmoqda", "bu ikki call")
+// logger.apply(ozimiziThis, ["bu esa applaydan kelmoqda", " bu ikkinchi applay"])
 
 
-
-// *******************************************
-
-
-function myFunction(arrone, arrtwo) {
+// let newFunc = logger.bind(ozimiziThis)
+// newFunc("ehllo", "hello")
 
 
-    if (arrone.length !== arrtwo.length) return false;
-
-    for (let i = 0; i < arrone.length; i++) {
-        if (arrone[i] !== arrtwo[i]) return false
+let courseData = [{
+        "id": "bdaf6bc4-9281-4bf3-8483-6ba4d522078c",
+        "name": {
+            "qr": "react js",
+            "uz": "react js "
+        },
+        "totalDuration": 0,
+        "lessonCount": 0,
+        "description": {
+            "qr": "bu kursda sz uyda otirib pul topasz",
+            "uz": " bu kursda sz uyda otirib pul topasz"
+        },
+        "descriptionvideo": "https://www.youtube.com/watch?v=PL3Odw-k8W4",
+        "type": "occupation",
+        "degree": "beginner",
+        "teacher": "Ahmadboy",
+        "teacherphoto": "f360140d-a5d6-48c6-9993-204d40411457.jpg",
+        "cover": "ed1375d4-cdf7-410d-8441-37cf21fd0729.jpg",
+        "count": 2,
+        "queue": 7,
+        "updatedat": "2024-07-15T06:17:52.887Z"
+    },
+    {
+        "id": "1cb0f26f-7b6a-4d81-a090-94df0398f0fe",
+        "name": {
+            "qr": "spp pro pr",
+            "uz": "Smm pro"
+        },
+        "totalDuration": 0,
+        "lessonCount": 0,
+        "description": {
+            "qr": "bu kursda sz uyda otirib pul topasz",
+            "uz": " bu kursda sz uyda otirib pul topasz"
+        },
+        "descriptionvideo": "https://www.youtube.com/watch?v=PL3Odw-k8W4",
+        "type": "occupation",
+        "degree": "beginner",
+        "teacher": "Ahmadboy",
+        "teacherphoto": "f360140d-a5d6-48c6-9993-204d40411457.jpg",
+        "cover": "ed1375d4-cdf7-410d-8441-37cf21fd0729.jpg",
+        "count": 2,
+        "queue": 3,
+        "updatedat": "2024-07-15T13:08:46.468Z"
+    },
+    {
+        "id": "2fa679f6-b08f-4c57-bcb1-d627d8ee3492",
+        "name": {
+            "qr": " node js qr",
+            "uz": "Node js"
+        },
+        "totalDuration": 0,
+        "lessonCount": 0,
+        "description": {
+            "qr": "bu kursda sz uyda otirib pul topasz",
+            "uz": " bu kursda sz uyda otirib pul topasz"
+        },
+        "descriptionvideo": "https://www.youtube.com/watch?v=PL3Odw-k8W4",
+        "type": "occupation",
+        "degree": "beginner",
+        "teacher": "Ahmadboy",
+        "teacherphoto": "f360140d-a5d6-48c6-9993-204d40411457.jpg",
+        "cover": "ed1375d4-cdf7-410d-8441-37cf21fd0729.jpg",
+        "count": 2,
+        "queue": 5,
+        "updatedat": "2024-07-15T13:09:18.513Z"
     }
+]
 
-    return true;
-
-}
-console.log(myFunction([1, 2, 3], [1, 2, 3])); // True
-console.log(myFunction([1, 2, 3], [1, 2, 5])); // False
+let newData = []
+courseData.forEach((el, i) => newData.push({queue: i,id: el ?.id}))
+console.log(newData);
