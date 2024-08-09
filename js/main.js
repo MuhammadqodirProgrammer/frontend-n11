@@ -1,112 +1,59 @@
-// "use strict";
-// function showThis() {
-//     console.log(this);
-// }
-// showThis();
+// let numbers = [4, 4, 5, 5, "ajoyib", 6, 7, 7, 8, 8, 9, 9, 10]
+
+// let seterArr = new Set(numbers)
+
+// let arr = Array.from(seterArr)
+// console.log(arr, "ozizmizni arr");
+// seterArr.add("salom")
+// seterArr.delete(10)
+// seterArr.forEach((val, val2, set) => {
+//     console.log(val, val2, set);
+// })
+// console.log(seterArr.has(10));
+// console.log(seterArr.values());
+
+
+// Clear bu setni tozalab beradi
+// seterArr.clear()
+// console.log(seterArr.size);
+
+
+// console.log(seterArr);
 
 
 
-// const person = {
-//     name: "Ahmad",
-//     greet: () => {
-//         console.log(this);
-//     }
-// };
-// person.greet(); // "Ahmad"
 
-// function Person(name) {
-//     this.name = name;
-//     console.log(this);
-// }
-// const person1 = new Person("Ali");
-// console.log(person1.name); // "Ali"
+for (let i = 0; i < 50; i++) {
+    document.body.innerHTML += `<button>id ${i +1} </button>`
+}
 
-// function logger(nimdir, nimdir2) {
-//     console.log(this, nimdir, nimdir2);
-// }
-
-
-// const ozimiziThis = {
+// console.table({
+//     name: "Ahamadboy",
 //     age: 20,
-//     salary: 10000
-// }
-// call applay ni ishlatishda farqi faqat argumnt berishda 
-// logger.call(ozimiziThis, "bu calldan kelmoqda", "bu ikki call")
-// logger.apply(ozimiziThis, ["bu esa applaydan kelmoqda", " bu ikkinchi applay"])
+//     adress: "tashkent"
+// });
+// console.table(["apple", "orange", "banana"]);
 
 
-// let newFunc = logger.bind(ozimiziThis)
-// newFunc("ehllo", "hello")
 
 
-let courseData = [{
-        "id": "bdaf6bc4-9281-4bf3-8483-6ba4d522078c",
-        "name": {
-            "qr": "react js",
-            "uz": "react js "
-        },
-        "totalDuration": 0,
-        "lessonCount": 0,
-        "description": {
-            "qr": "bu kursda sz uyda otirib pul topasz",
-            "uz": " bu kursda sz uyda otirib pul topasz"
-        },
-        "descriptionvideo": "https://www.youtube.com/watch?v=PL3Odw-k8W4",
-        "type": "occupation",
-        "degree": "beginner",
-        "teacher": "Ahmadboy",
-        "teacherphoto": "f360140d-a5d6-48c6-9993-204d40411457.jpg",
-        "cover": "ed1375d4-cdf7-410d-8441-37cf21fd0729.jpg",
-        "count": 2,
-        "queue": 7,
-        "updatedat": "2024-07-15T06:17:52.887Z"
-    },
-    {
-        "id": "1cb0f26f-7b6a-4d81-a090-94df0398f0fe",
-        "name": {
-            "qr": "spp pro pr",
-            "uz": "Smm pro"
-        },
-        "totalDuration": 0,
-        "lessonCount": 0,
-        "description": {
-            "qr": "bu kursda sz uyda otirib pul topasz",
-            "uz": " bu kursda sz uyda otirib pul topasz"
-        },
-        "descriptionvideo": "https://www.youtube.com/watch?v=PL3Odw-k8W4",
-        "type": "occupation",
-        "degree": "beginner",
-        "teacher": "Ahmadboy",
-        "teacherphoto": "f360140d-a5d6-48c6-9993-204d40411457.jpg",
-        "cover": "ed1375d4-cdf7-410d-8441-37cf21fd0729.jpg",
-        "count": 2,
-        "queue": 3,
-        "updatedat": "2024-07-15T13:08:46.468Z"
-    },
-    {
-        "id": "2fa679f6-b08f-4c57-bcb1-d627d8ee3492",
-        "name": {
-            "qr": " node js qr",
-            "uz": "Node js"
-        },
-        "totalDuration": 0,
-        "lessonCount": 0,
-        "description": {
-            "qr": "bu kursda sz uyda otirib pul topasz",
-            "uz": " bu kursda sz uyda otirib pul topasz"
-        },
-        "descriptionvideo": "https://www.youtube.com/watch?v=PL3Odw-k8W4",
-        "type": "occupation",
-        "degree": "beginner",
-        "teacher": "Ahmadboy",
-        "teacherphoto": "f360140d-a5d6-48c6-9993-204d40411457.jpg",
-        "cover": "ed1375d4-cdf7-410d-8441-37cf21fd0729.jpg",
-        "count": 2,
-        "queue": 5,
-        "updatedat": "2024-07-15T13:09:18.513Z"
-    }
-]
+function rotateArrayLeft(arr, n) {
+    let a = arr.splice(0, n + 1)
+    arr.push(...a)
+    console.log(arr);
+}
 
-let newData = []
-courseData.forEach((el, i) => newData.push({queue: i,id: el ?.id}))
-console.log(newData);
+console.log(rotateArrayLeft([1, 2, 3, 4, 5], 2));
+
+
+
+const oddIndexedElements = (arr) => arr.filter(num => num % 2 == 0)
+
+console.log(oddIndexedElements([1, 2, 3, 4, 5, 6]));
+
+
+
+const removeDigits = (str) => str.split("").filter(str => isNaN(str)).join("")
+
+
+console.log(removeDigits("abc123def456"));
